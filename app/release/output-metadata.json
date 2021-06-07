@@ -4,14 +4,14 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.switchcase",
+  "applicationId": "com.krish.switchcase",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "versionCode": 1,
-      "versionName": "1.0",
+      "versionName": "1.1",
       "outputFile": "app-release.apk"
     }
   ]

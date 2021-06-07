@@ -60,6 +60,18 @@ class CaseFragment : Fragment() {
         return words.joinToString(".") { word -> word.lowercase() }
     }
 
+    private fun toSpaceCase(text: String): String {
+        val lines = text.split("\n")
+        var spaceTing = ""
+        for (line in lines) {
+            var newLine = ""
+            for (char in line)
+                newLine += "$char "
+            spaceTing += "\n" + newLine.trim()
+        }
+        return spaceTing.trim()
+    }
+
     private fun toReverseCase(text: String): String {
         val lines = text.split("\n")
         var revTing = ""
@@ -159,10 +171,11 @@ class CaseFragment : Fragment() {
             5 -> binding.textView.text = toSnakeCase(text)
             6 -> binding.textView.text = toKebabCase(text)
             7 -> binding.textView.text = toDotCase(text)
-            8 -> binding.textView.text = toReverseCase(text)
-            9 -> binding.textView.text = toUglyCase(text)
-            10 -> binding.textView.text = toGoneCase(text)
-            11 -> binding.textView.text = toClapCase(text)
+            8 -> binding.textView.text = toSpaceCase(text)
+            9 -> binding.textView.text = toReverseCase(text)
+            10 -> binding.textView.text = toUglyCase(text)
+            11 -> binding.textView.text = toGoneCase(text)
+            12 -> binding.textView.text = toClapCase(text)
             else -> binding.textView.text = text
         }
     }

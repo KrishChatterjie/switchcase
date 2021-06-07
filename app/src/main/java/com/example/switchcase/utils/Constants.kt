@@ -11,6 +11,7 @@ object Constants {
             "snake_case",
             "kebab-case",
             "dot.case",
+            "s p a c e   c a s e",
             "esac esrever",
             "uGLy cAsE",
             "G0И3 ¢4$3",
