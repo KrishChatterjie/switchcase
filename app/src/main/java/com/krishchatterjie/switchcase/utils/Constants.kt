@@ -1,4 +1,4 @@
-package com.example.switchcase.utils
+package com.krishchatterjie.switchcase.utils
 
 object Constants {
     val CASES =
@@ -12,6 +12,7 @@ object Constants {
             "kebab-case",
             "dot.case",
             "s p a c e   c a s e",
+            "TOWER CASE",
             "esac esrever",
             "uGLy cAsE",
             "G0И3 ¢4$3",

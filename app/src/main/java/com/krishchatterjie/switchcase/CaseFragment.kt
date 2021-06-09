@@ -1,11 +1,10 @@
-package com.example.switchcase
+package com.krishchatterjie.switchcase
 
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context.CLIPBOARD_SERVICE
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,8 +12,8 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.core.widget.doOnTextChanged
 import androidx.databinding.DataBindingUtil
-import androidx.viewpager.widget.PagerAdapter
-import com.example.switchcase.databinding.FragmentCaseBinding
+import androidx.fragment.app.Fragment
+import com.krishchatterjie.switchcase.databinding.FragmentCaseBinding
 
 class CaseFragment : Fragment() {
     private lateinit var binding: FragmentCaseBinding
@@ -70,6 +69,18 @@ class CaseFragment : Fragment() {
             spaceTing += "\n" + newLine.trim()
         }
         return spaceTing.trim()
+    }
+
+    private fun toTowerCase(text: String): String {
+        val lines = text.uppercase().split("\n")
+        var towerTing = ""
+        for (line in lines) {
+            var newLine = ""
+            for (char in line)
+                newLine += "$char\n"
+            towerTing += "\n" + newLine.trim()
+        }
+        return towerTing.trim()
     }
 
     private fun toReverseCase(text: String): String {
@@ -172,10 +183,11 @@ class CaseFragment : Fragment() {
             6 -> binding.textView.text = toKebabCase(text)
             7 -> binding.textView.text = toDotCase(text)
             8 -> binding.textView.text = toSpaceCase(text)
-            9 -> binding.textView.text = toReverseCase(text)
-            10 -> binding.textView.text = toUglyCase(text)
-            11 -> binding.textView.text = toGoneCase(text)
-            12 -> binding.textView.text = toClapCase(text)
+            9 -> binding.textView.text = toTowerCase(text)
+            10 -> binding.textView.text = toReverseCase(text)
+            11 -> binding.textView.text = toUglyCase(text)
+            12 -> binding.textView.text = toGoneCase(text)
+            13 -> binding.textView.text = toClapCase(text)
             else -> binding.textView.text = text
         }
     }

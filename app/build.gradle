@@ -9,7 +9,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.krish.switchcase"
+        applicationId "com.krishchatterjie.switchcase"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1

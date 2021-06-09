@@ -1,4 +1,4 @@
-package com.example.switchcase
+package com.krishchatterjie.switchcase
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -6,15 +6,15 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.viewpager2.widget.ViewPager2
-import com.example.switchcase.databinding.ActivityMainBinding
-import com.example.switchcase.utils.Constants.CASES
 import com.google.android.material.tabs.TabLayoutMediator
+import com.krishchatterjie.switchcase.databinding.ActivityMainBinding
+import com.krishchatterjie.switchcase.utils.Constants.CASES
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var sharedPrefs: SharedPreferences
-    private lateinit var pageChangeCallback : ViewPager2.OnPageChangeCallback
+    private lateinit var pageChangeCallback: ViewPager2.OnPageChangeCallback
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
