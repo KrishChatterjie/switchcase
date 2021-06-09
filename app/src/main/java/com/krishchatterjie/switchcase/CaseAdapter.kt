@@ -1,10 +1,10 @@
-package com.example.switchcase
+package com.krishchatterjie.switchcase
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.switchcase.utils.Constants.NUM_CASES
+import com.krishchatterjie.switchcase.utils.Constants.NUM_CASES
 
 
 class CaseAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
